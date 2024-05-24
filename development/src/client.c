@@ -1596,7 +1596,7 @@ int cl_writeList(
     gxByteBuffer data;
     ve_init(&e);
     gxByteBuffer* pdu;
-    int ret;
+    int ret = 0;
 #ifdef DLMS_IGNORE_MALLOC
     if (settings->serializedPdu == NULL)
     {

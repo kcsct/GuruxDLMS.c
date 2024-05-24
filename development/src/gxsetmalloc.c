@@ -5302,7 +5302,7 @@ int cosem_setFunctionControl(
                 {
                     break;
                 }
-                bb_init(&it->name);
+                bb_Init(&it->name);
                 bb_set2(&it->name, tmp2->byteArr, 0, bb_size(tmp2->byteArr));
                 if ((ret = va_getByIndex(tmp->Arr, 1, &tmp2)) != DLMS_ERROR_CODE_OK)
                 {
@@ -5339,7 +5339,7 @@ int cosem_setFunctionControl(
                 {
                     break;
                 }
-                bb_init(&it->name);
+                bb_Init(&it->name);
                 bb_set2(&it->name, tmp2->byteArr, 0, bb_size(tmp2->byteArr));
                 if ((ret = va_getByIndex(tmp->Arr, 1, &tmp2)) != DLMS_ERROR_CODE_OK)
                 {
@@ -5681,10 +5681,10 @@ int cosem_setPushSetup(dlmsSettings* settings,
                     gxfree(p);
                     break;
                 }
-                bb_init(&p->transactionId);
-                bb_init(&p->otherInformation);
-                bb_init(&p->keyInfo.agreedKey.parameters);
-                bb_init(&p->keyInfo.agreedKey.data);
+                bb_Init(&p->transactionId);
+                bb_Init(&p->otherInformation);
+                bb_Init(&p->keyInfo.agreedKey.parameters);
+                bb_Init(&p->keyInfo.agreedKey.data);
 
                 p->protectionType = (DLMS_PROTECTION_TYPE)var_toInteger(tmp3);
 
